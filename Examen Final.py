@@ -13,26 +13,26 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Inicializar la aplicación Dash
+#inicializar la aplicación Dash
 app = Dash(__name__)
 
-# Layout del Dashboard
-app.layout = html.Div([
-    html.H1("Dashboard Interactivo - Café Santo Domingo", style={"textAlign": "center"}),
 
-    # Gráfico 1: Tasa de Conversión
+app.layout = html.Div([
+    html.H1("Dashboard - Café Santo Domingo", style={"textAlign": "center"}),
+
+    #Gráfico 1: Tasa de conversión
     dcc.Graph(
         id="tasa-conversion",
-        figure=px.line(df, x="Mes", y="Tasa_Conversion", title="Tasa de Conversión por Mes", markers=True)
+        figure=px.line(df, x="Mes", y="Tasa_Conversion", title="Tasa de conversión por mes", markers=True)
     ),
 
-    # Gráfico 2: AOV por Mes
+    # Gráfico 2: AOV por mes
     dcc.Graph(
         id="aov",
-        figure=px.bar(df, x="Mes", y="AOV", title="Valor Promedio de Pedido (AOV)")
+        figure=px.bar(df, x="Mes", y="AOV", title="Valor promedio de pedido (AOV)")
     ),
 
-    # Gráfico 3: Tasa de Abandono de Carrito
+    # Gráfico 3: Tasa de abandono de carrito
     dcc.Graph(
         id="abandono-carrito",
         figure=px.line(df, x="Mes", y="Abandono_Carrito", title="Tasa de Abandono de Carrito", markers=True)
@@ -45,6 +45,5 @@ app.layout = html.Div([
     )
 ])
 
-# Ejecutar el servidor
 if __name__ == '__main__':
     app.run_server(debug=True)
