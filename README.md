@@ -2,7 +2,7 @@
 
 # Dashboard Interactivo - Café Santo Domingo ☕️
 
-Este proyecto es un dashboard interactivo diseñado para monitorear los indicadores clave de rendimiento (KPI) de **Café Santo Domingo**, una empresa de comercio electrónico en República Dominicana. El dashboard está construido utilizando **Dash** y **Plotly**.
+Este proyecto es un dashboard interactivo diseñado para monitorear los indicadores clave de rendimiento (KPI) de Café Santo Domingo, una empresa de comercio electrónico en República Dominicana. El dashboard está construido utilizando Dash y Plotly.
 
 ## 📋 Descripción
 
